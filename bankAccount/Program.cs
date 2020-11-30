@@ -26,14 +26,20 @@ namespace bankAccount
 
                 - Program klasse som kjører alt.
                 - Kontoinformasjon.
-                - En klasse som har metodene vi trenger for å overføre penger.
-             */
+                - En klasse som har metodene vi trenger for å overføre penger.*/
+
+            var testSubject = new accountDetails { AccountID = 1, CustomerName = "Test", Balance = 5 };
+
             var app = new bankingApp();
+            var transaction = new Transaction();
+            var customer = new Customer();
 
             Console.Write(app.WelcomeMessage);
             while (true) {
                 Console.Write(app.CommandPrompt);
-                Console.ReadLine();
+                var command = Console.ReadLine();
+                var response = app.HandleCommands(command);
+                Console.WriteLine(response);
             }
 
         }

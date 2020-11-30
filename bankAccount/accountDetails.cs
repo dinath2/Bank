@@ -10,12 +10,12 @@ using System.Text;
     public int Balance;
     public string Transactions;
 
-        public string accountDesription ()
+        public string accountDesription()
         {
             string description = string.Empty;
             if (AccountID != 0) description += AccountID + " ";
             if (CustomerName != null) description += CustomerName + " ";
-            if (Balance != 0) description += Balance + " ";
+            if (Balance != 0) description += Balance + ".kr ";
             if (Transactions != null) description += Transactions + " ";
             return description;
         }
