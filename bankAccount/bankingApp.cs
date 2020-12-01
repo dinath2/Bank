@@ -23,11 +23,15 @@ public class bankingApp {
         var toLowerCommand = command.ToLower();
         if (toLowerCommand == AccountID) { 
             accountDesription();
+            return GeneralOptionPrompt;
 
-            if (toLowerCommand == "bytt") { }
-            if (toLowerCommand == "endre") { }
-            if (toLowerCommand == "saldo") { }
-            if (toLowerCommand == "overføre") { }
+            if (toLowerCommand == "bytt") {
+            }
+            if (toLowerCommand == "endre") NameChange();
+            if (toLowerCommand == "saldo") InternalBalanceChange();
+            if (toLowerCommand == "overføre") {
+                Transfer();
+            }
         }
         return "Ugyldig kommando";
     }
